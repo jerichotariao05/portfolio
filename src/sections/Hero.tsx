@@ -14,12 +14,12 @@ const HeroSection = () => {
         <div className="flex flex-col items-center">
           <Image
             src={profileImage}
-            className="h-24 w-24 rounded-full border-2 border-white shadow-lg mb-2"
+            className="h-24 w-24 rounded-full border-2 border-white drop-shadow-md mb-2"
             alt="Profile"
             quality="95"
             priority={true}
           />
-          <div className="bg-gray-900 border border-gray-800 px-4 py-1.5 inline-flex items-center gap-4 rounded-lg">
+          <div className="bg-gray-900 border border-gray-800 px-4 py-1.5 inline-flex items-center gap-4 rounded-full">
             <div className="bg-green-500 size-2.5 rounded-full"></div>
             <div className="text-sm text-white font-medium">
               Currently expanding skills
@@ -40,7 +40,7 @@ const HeroSection = () => {
             <span className="font-semibold text-blue-500">My projects</span>
             <Folders className="size-4 text-blue-500" />
           </button>
-          <button className="inline-flex items-center gap-2 bg-blue-500 text-white px-6 h-10 rounded-xl">
+          <button className="inline-flex items-center gap-2 bg-blue-500 text-white px-6 h-10 rounded-xl drop-shadow-md">
             <span className="font-semibold">Download resume</span>
             <ArrowDownToLine className="size-4" />
           </button>

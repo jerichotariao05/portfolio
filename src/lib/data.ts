@@ -1,7 +1,7 @@
 import sisImage from "@/assets/images/CRB_login.png";
 import petAdoptionImage from "@/assets/images/pet_adoption.avif";
-import mathAppImage from "@/assets/images/math_kids.jpeg";
-import novelaImage from "@/assets/images/photo_novela.png";
+import mathAppImage from "@/assets/images/math_kids.png";
+import novelaImage from "@/assets/images/photonovela.png";
 
 export const links = [
   {
@@ -40,22 +40,6 @@ export const portfolioProjects = [
   },
   {
     id: 2,
-    name: "Pet Adoption System",
-    projectType: "Web Application",
-    descriptions: [
-      {
-        detail:
-          "Developed a web application to facilitate the rescue and adoption of stray and homeless pets.",
-      },
-      {
-        detail:
-          "Supports users in browsing available pets, submitting adoption requests, and tracking adoption status.",
-      },
-    ],
-    image: petAdoptionImage,
-  },
-  {
-    id: 3,
     name: "Math for Kids",
     projectType: "Mobile Application",
     descriptions: [
@@ -72,7 +56,7 @@ export const portfolioProjects = [
   },
   {
     id: 3,
-    name: "Photonovela",
+    name: "Photo Novela",
     projectType: "Mobile Application",
     descriptions: [
       {
@@ -85,5 +69,21 @@ export const portfolioProjects = [
       },
     ],
     image: novelaImage,
+  },
+  {
+    id: 4,
+    name: "Pet Adoption System",
+    projectType: "Web Application",
+    descriptions: [
+      {
+        detail:
+          "Developed a web application to facilitate the rescue and adoption of stray and homeless pets.",
+      },
+      {
+        detail:
+          "Supports users in browsing available pets, submitting adoption requests, and tracking adoption status.",
+      },
+    ],
+    image: petAdoptionImage,
   },
 ] as const;
