@@ -1,6 +1,6 @@
 import profileImage from "@/assets/images/profile.png";
 import Image from "next/image";
-import { ArrowDownToLine, Folders } from "lucide-react";
+import { ArrowDownToLine, UserRound } from "lucide-react";
 import grainImage from "@/assets/images/grain.jpg";
 
 const HeroSection = () => {
@@ -36,11 +36,13 @@ const HeroSection = () => {
           </p>
         </div>
         <div className="flex flex-col md:flex-row justify-center items-center mt-8 gap-4">
-          <button className="inline-flex items-center gap-2 border border-blue-500 px-6 h-10 rounded-xl">
-            <span className="font-semibold text-blue-500">My projects</span>
-            <Folders className="size-4 text-blue-500" />
+          <button className="inline-flex items-center gap-2 border border-blue-500 px-6 h-10 rounded-full">
+            <div className="inline-flex items-center gap-2 text-blue-500">
+              <span className="font-semibold">Contact me</span>
+              <UserRound className="size-4" />
+            </div>
           </button>
-          <button className="inline-flex items-center gap-2 bg-blue-500 text-white px-6 h-10 rounded-xl drop-shadow-md">
+          <button className="inline-flex items-center gap-2 bg-blue-500 text-white px-6 h-10 rounded-full drop-shadow-md hover:bg-blue-500/80">
             <span className="font-semibold">Download resume</span>
             <ArrowDownToLine className="size-4" />
           </button>

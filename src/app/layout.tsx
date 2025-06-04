@@ -27,7 +27,7 @@ export default function RootLayout({
         className={twMerge(
           raleway.variable,
           montserrat.variable,
-          "bg-blue-50 text-gray-950 antialiased font-sans"
+          "bg-blue-50 text-gray-950 antialiased font-sans overflow-x-hidden"
         )}
       >
         {children}

@@ -6,6 +6,9 @@
   .nav-item {
     @apply px-4 py-1.5 rounded-full text-sm font-semibold hover:text-gray-950 dark:text-gray-500 dark:hover:text-gray-300 transition duration-300;
   }
+  .sticky-tape {
+    @apply bg-gradient-to-tr from-white/40 via-white/10 to-white/30 backdrop-blur-md;
+  }
 }
 
 @layer utilities {
