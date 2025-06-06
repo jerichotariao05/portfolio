@@ -9,6 +9,9 @@
   .sticky-tape {
     @apply bg-gradient-to-tr from-white/40 via-white/10 to-white/30 backdrop-blur-md;
   }
+  .custom-input {
+    @apply h-10 rounded-lg px-4 shadow-sm border-2 border-gray-50 focus:outline-none focus:border-sky-300;
+  }
 }
 
 @layer utilities {

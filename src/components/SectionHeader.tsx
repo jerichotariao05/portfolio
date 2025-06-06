@@ -1,12 +1,10 @@
-const SectionHeader = ({
-  eyebrow,
-  title,
-  description,
-}: {
+interface SectionHeaderProps {
   eyebrow: string;
   title: string;
   description: string;
-}) => {
+}
+
+const SectionHeader = ({ eyebrow, title, description }: SectionHeaderProps) => {
   return (
     <>
       <div className="flex justify-center">

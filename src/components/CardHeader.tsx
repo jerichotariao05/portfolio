@@ -1,16 +1,18 @@
 import { PropsWithChildren, ReactNode } from "react";
 import { twMerge } from "tailwind-merge";
 
+type CardContentProps = PropsWithChildren<{
+  icon: ReactNode;
+  title: string;
+  className?: string;
+}>;
+
 const CardContent = ({
   icon,
   title,
   children,
   className,
-}: PropsWithChildren<{
-  icon: ReactNode;
-  title: string;
-  className?: string;
-}>) => {
+}: CardContentProps) => {
   return (
     <div className={twMerge("flex flex-col", className)}>
       <div className="inline-flex items-center gap-2">

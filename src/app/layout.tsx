@@ -2,6 +2,9 @@ import type { Metadata } from "next";
 import { Raleway, Montserrat } from "next/font/google";
 import "./globals.css";
 import { twMerge } from "tailwind-merge";
+import FooterSection from "@/sections/Footer";
+import { Toaster } from "react-hot-toast";
+import Header from "@/sections/Header";
 
 const raleway = Raleway({ subsets: ["latin"], variable: "--font-sans" });
 const montserrat = Montserrat({
@@ -27,10 +30,13 @@ export default function RootLayout({
         className={twMerge(
           raleway.variable,
           montserrat.variable,
-          "bg-blue-50 text-gray-950 antialiased font-sans overflow-x-hidden"
+          "bg-blue-50 text-gray-950 antialiased font-sans"
         )}
       >
+        <Header />
         {children}
+        <FooterSection />
+        <Toaster position="top-right" />
       </body>
     </html>
   );

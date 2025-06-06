@@ -87,3 +87,18 @@ export const portfolioProjects = [
     image: petAdoptionImage,
   },
 ] as const;
+
+export const footerLinks = [
+  {
+    name: "LinkedIn",
+    href: "https://www.linkedin.com/in/jericho-joshua-tariao-500284329/",
+  },
+  {
+    name: "Github",
+    href: "https://github.com/jerichotariao05",
+  },
+  {
+    name: "Facebook",
+    href: "https://www.facebook.com/jerichotariao",
+  },
+] as const;

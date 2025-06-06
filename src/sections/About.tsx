@@ -19,7 +19,7 @@ const AboutSection = () => {
           description="I am an aspiring web and mobile developer with a strong passion for combining creativity and functionality to build intuitive and engaging digital solutions. I have a solid foundation and experience in front-end, back-end, and mobile technologies."
         />
         <div className="mt-20 flex flex-col gap-8 md:flex-row md:gap-6">
-          <div className="flex flex-col gap-8 md:gap-6 md:w-[40%] ">
+          <div className="flex flex-col gap-8 md:gap-6 md:w-[45%] ">
             <Card>
               <CardContent
                 icon={<GraduationCap className="size-6" />}
@@ -44,7 +44,7 @@ const AboutSection = () => {
                   {skillItems.map(({ title, icon, color }) => (
                     <div
                       key={title}
-                      className="flex flex-col items-center justify-center min-w-[6rem] min-h-[6rem] sticky-tape rounded-md shadow-sm"
+                      className="flex flex-col items-center justify-center min-w-[6rem] min-h-[6rem] sticky-tape rounded-md shadow-sm focus:scale-110 hover:scale-110 active:scale-105 transition"
                       style={{ color }}
                     >
                       <span className="size-10">{icon}</span>
@@ -60,7 +60,7 @@ const AboutSection = () => {
               </CardContent>
             </Card>
           </div>
-          <div className="md:w-[60%]">
+          <div className="md:w-[55%]">
             <Card>
               <CardContent
                 icon={<BriefcaseBusiness className="size-6" />}
