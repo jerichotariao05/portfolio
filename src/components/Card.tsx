@@ -8,7 +8,7 @@ const Card = ({ className, children, ...otherProp }: CardProps) => {
     <>
       <div
         className={twMerge(
-          "bg-gradient-to-br from-sky-100 via-blue-200 to-blue-300 rounded-3xl relative z-0 p-6 overflow-clip shadow-none transition-shadow duration-300 hover:shadow-md",
+          "bg-gradient-to-br from-sky-100 via-blue-200 to-blue-300 rounded-3xl border border-t-blue-100 relative z-0 p-6 overflow-clip shadow-none transition-shadow duration-300 hover:shadow-md",
           className
         )}
         {...otherProp}

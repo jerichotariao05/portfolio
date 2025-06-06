@@ -2,9 +2,7 @@ import type { Metadata } from "next";
 import { Raleway, Montserrat } from "next/font/google";
 import "./globals.css";
 import { twMerge } from "tailwind-merge";
-import FooterSection from "@/sections/Footer";
-import { Toaster } from "react-hot-toast";
-import Header from "@/sections/Header";
+import ActiveSectionContextProvider from "@/context/ActiveSectionContext";
 
 const raleway = Raleway({ subsets: ["latin"], variable: "--font-sans" });
 const montserrat = Montserrat({
@@ -25,7 +23,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="!scroll-smooth">
       <body
         className={twMerge(
           raleway.variable,
@@ -33,10 +31,7 @@ export default function RootLayout({
           "bg-blue-50 text-gray-950 antialiased font-sans"
         )}
       >
-        <Header />
-        {children}
-        <FooterSection />
-        <Toaster position="top-right" />
+        <ActiveSectionContextProvider>{children}</ActiveSectionContextProvider>
       </body>
     </html>
   );

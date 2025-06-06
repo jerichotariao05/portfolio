@@ -36,6 +36,7 @@ export const portfolioProjects = [
           "Improve data tracking, and support net weight-based inventory management.",
       },
     ],
+    languages: ["HTML", "CSS", "Bootstrap 5", "JavaScript", "PHP", "MySQL"],
     image: sisImage,
   },
   {
@@ -52,6 +53,7 @@ export const portfolioProjects = [
           "Designed to make math enjoyable and accessible for young learners, supporting counting, addition, and subtraction.",
       },
     ],
+    languages: ["Dart", "Flutter"],
     image: mathAppImage,
   },
   {
@@ -68,6 +70,7 @@ export const portfolioProjects = [
           "Designed as a social platform that combines elements of Instagram-style photo sharing with narrative storytelling.",
       },
     ],
+    languages: ["Dart", "Flutter", "PHP", "MySQL"],
     image: novelaImage,
   },
   {
@@ -84,6 +87,7 @@ export const portfolioProjects = [
           "Supports users in browsing available pets, submitting adoption requests, and tracking adoption status.",
       },
     ],
+    languages: ["Next.js", "Tailwind", "PHP", "MySQL"],
     image: petAdoptionImage,
   },
 ] as const;

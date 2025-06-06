@@ -1,3 +1,5 @@
+"use client";
+
 import Card from "@/components/Card";
 import SectionHeader from "@/components/SectionHeader";
 import {
@@ -8,10 +10,13 @@ import {
 } from "lucide-react";
 import { skillItems } from "@/lib/logo_svgs";
 import CardContent from "@/components/CardHeader";
+import { useSectionInView } from "@/lib/custom_hook";
 
 const AboutSection = () => {
+  const { ref } = useSectionInView("About");
+
   return (
-    <section className="py-20">
+    <section className="py-20" id="about" ref={ref}>
       <div className="container">
         <SectionHeader
           eyebrow="About Me"

@@ -1,12 +1,17 @@
+"use client";
+
 import { portfolioProjects } from "@/lib/data";
 import Image from "next/image";
 import { Goal } from "lucide-react";
 import SectionHeader from "@/components/SectionHeader";
 import Card from "@/components/Card";
+import { useSectionInView } from "@/lib/custom_hook";
 
 const ProjectsSection = () => {
+  const { ref } = useSectionInView("Projects", 0.15);
+
   return (
-    <section className="pb-16 lg:py-24">
+    <section className="pb-16 lg:py-24" id="projects" ref={ref}>
       <div className="container">
         <SectionHeader
           eyebrow="Bringing ideas to life"
@@ -18,21 +23,19 @@ const ProjectsSection = () => {
         <div className="flex flex-col mt-10 md:mt-20 gap-12">
           {portfolioProjects.map((project) => (
             <div
+              key={project.id}
               className="sticky"
               style={{
-                top: `calc(64px + ${project.id * 25}px)`,
+                top: `calc(64px + ${project.id * 20}px)`,
               }}
             >
-              <div className="bg-sky-100 w-3/4 md:w-2/4 rounded-3xl rounded-bl-none rounded-br-none py-4 px-8">
+              <div className="bg-sky-100 border border-t-sky-50 w-3/4 md:w-2/4 rounded-3xl rounded-bl-none rounded-br-none py-4 px-8">
                 <span className="font-serif text-slate-900 md:text-xl font-semibold sticky-tape rounded-sm shadow-sm py-2 px-4">
                   Project no. {project.id}
                 </span>
               </div>
               {/* Project content */}
-              <Card
-                key={project.id}
-                className="rounded-tl-none px-8 pt-8 pb-0 md:pt-12 md:px-10 lg:pt-16 lg:px-20 overflow-clip"
-              >
+              <Card className="rounded-tl-none px-8 pt-8 pb-0 md:pt-12 md:px-10 lg:pt-16 lg:px-20  h-[26rem] md:h-[30rem] lg:h-auto overflow-clip">
                 <div className="lg:grid lg:grid-cols-2 lg:gap-16">
                   <div className="lg:pb-16">
                     <div className="bg-gradient-to-r from-sky-400 to-blue-600 inline-flex font-bold uppercase tracking-widest text-sm text-transparent bg-clip-text">
@@ -60,7 +63,7 @@ const ProjectsSection = () => {
                     <Image
                       src={project.image}
                       alt={project.name}
-                      className="mt-8 -mb-4 md:-mb-0 lg:mt-0 lg:absolute lg:h-full lg:w-auto lg:max-w-none"
+                      className="w-full mt-4 -mb-4 md:-mb-0 lg:mt-0 lg:absolute lg:h-full lg:w-auto lg:max-w-none"
                     />
                   </div>
                 </div>

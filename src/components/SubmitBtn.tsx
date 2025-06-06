@@ -1,6 +1,5 @@
 "use client";
 
-import React from "react";
 import { Send } from "lucide-react";
 
 type SubmitBtnProps = {
@@ -15,7 +14,8 @@ const SubmitBtn = ({ pending }: SubmitBtnProps) => {
         className="self-start mt-4 bg-slate-900 text-white px-6 h-10 rounded-full shadow-md inline-flex items-center justify-center font-semibold disabled:opacity-65"
         disabled
       >
-        <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
+        Loading
+        <div className="pl-1 w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
       </button>
     );
   }

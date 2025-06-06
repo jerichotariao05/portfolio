@@ -1,11 +1,20 @@
+"use client";
+
 import profileImage from "@/assets/images/profile.png";
 import Image from "next/image";
 import { ArrowDownToLine, UserRound } from "lucide-react";
 import Link from "next/link";
+import { useSectionInView } from "@/lib/custom_hook";
 
 const HeroSection = () => {
+  const { ref } = useSectionInView("Home", 0.5);
+
   return (
-    <section className="py-32 md:py-48 lg:py-48 relative z-0">
+    <section
+      className="py-32 md:py-48 lg:py-48 relative z-0"
+      id="home"
+      ref={ref}
+    >
       <div
         className="absolute inset-0 -z-30 opacity-5"
         style={{
@@ -33,17 +42,20 @@ const HeroSection = () => {
             Developing innovative and user-friendly interfaces
           </h1>
           <p className="mt-4 text-center text-slate-600 md:text-large">
-            I specialized in creating intuitive and engaging web interfaces,
-            driven by a passion to blend functionality with creativity
+            I specialized in creating intuitive and engaging web and mobile
+            interfaces, driven by a passion to blend functionality with
+            creativity
           </p>
         </div>
         <div className="flex flex-col md:flex-row justify-center items-center mt-8 gap-5">
-          <button className="inline-flex items-center gap-2 border border-blue-500 text-blue-500 px-6 h-10 rounded-full cursor-pointer hover:bg-blue-500 hover:text-white focus:scale-110 hover:scale-110 active:scale-105 transition">
-            <div className="inline-flex items-center gap-2">
-              <span className="font-semibold ">Contact me</span>
-              <UserRound className="size-4" />
-            </div>
-          </button>
+          <Link href="#contact">
+            <button className="inline-flex items-center gap-2 border border-blue-500 text-blue-500 px-6 h-10 rounded-full cursor-pointer hover:bg-blue-500 hover:text-white focus:scale-110 hover:scale-110 active:scale-105 transition">
+              <div className="inline-flex items-center gap-2">
+                <span className="font-semibold ">Contact me</span>
+                <UserRound className="size-4" />
+              </div>
+            </button>
+          </Link>
           <a
             className="inline-flex items-center gap-2 bg-blue-500 text-white px-6 h-10 rounded-full drop-shadow-md hover:bg-blue-500/80 cursor-pointer focus:scale-110 hover:scale-110 active:scale-105 transition"
             href="/Resume.pdf"

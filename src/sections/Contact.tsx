@@ -9,8 +9,11 @@ import {
   validateContactForm,
 } from "@/lib/helper";
 import { useState } from "react";
+import { useSectionInView } from "@/lib/custom_hook";
 
 const ContactSection = () => {
+  const { ref } = useSectionInView("Contact", 0.65);
+
   const [formData, setFormData] = useState<
     ContactFormData & { honeybot: string }
   >({
@@ -71,7 +74,7 @@ const ContactSection = () => {
   };
 
   return (
-    <section className="py-16 pt-12 lg:py-24 lg:pt-32">
+    <section className="py-16 pt-12 lg:py-24 lg:pt-32" id="contact" ref={ref}>
       <div className="container">
         <div className="bg-gradient-to-br from-sky-100 via-blue-200 to-blue-300 rounded-3xl shadow-md py-8 px-10 relative z-0">
           <div
