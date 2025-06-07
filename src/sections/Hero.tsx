@@ -10,11 +10,7 @@ const HeroSection = () => {
   const { ref } = useSectionInView("Home", 0.5);
 
   return (
-    <section
-      className="py-32 md:py-48 lg:py-48 relative z-0"
-      id="home"
-      ref={ref}
-    >
+    <section className="py-32 md:py-40 relative z-0" id="home" ref={ref}>
       <div
         className="absolute inset-0 -z-30 opacity-5"
         style={{
@@ -39,12 +35,12 @@ const HeroSection = () => {
         </div>
         <div className="max-w-lg mx-auto">
           <h1 className="font-serif text-3xl md:text-5xl text-center mt-8 tracking-wide">
-            Developing innovative and user-friendly interfaces
+            Creating Accessible and Visually Engaging Interfaces
           </h1>
           <p className="mt-4 text-center text-slate-600 md:text-large">
             I specialized in creating intuitive and engaging web and mobile
             interfaces, driven by a passion to blend functionality with
-            creativity
+            creativity.
           </p>
         </div>
         <div className="flex flex-col md:flex-row justify-center items-center mt-8 gap-5">

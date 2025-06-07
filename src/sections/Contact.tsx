@@ -74,7 +74,11 @@ const ContactSection = () => {
   };
 
   return (
-    <section className="py-16 pt-12 lg:py-24 lg:pt-32" id="contact" ref={ref}>
+    <section
+      className="py-16 pt-12 lg:py-24 lg:pt-32 sm:scroll-mt-2 lg:-scroll-mt-16"
+      id="contact"
+      ref={ref}
+    >
       <div className="container">
         <div className="bg-gradient-to-br from-sky-100 via-blue-200 to-blue-300 rounded-3xl shadow-md py-8 px-10 relative z-0">
           <div

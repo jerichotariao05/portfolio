@@ -11,7 +11,11 @@ const ProjectsSection = () => {
   const { ref } = useSectionInView("Projects", 0.15);
 
   return (
-    <section className="pb-16 lg:py-24" id="projects" ref={ref}>
+    <section
+      className="pb-16 lg:py-24 sm:scroll-mt-20 lg:scroll-mt-0"
+      id="projects"
+      ref={ref}
+    >
       <div className="container">
         <SectionHeader
           eyebrow="Bringing ideas to life"
@@ -63,7 +67,7 @@ const ProjectsSection = () => {
                     <Image
                       src={project.image}
                       alt={project.name}
-                      className="w-full mt-4 -mb-4 md:-mb-0 lg:mt-0 lg:absolute lg:h-full lg:w-auto lg:max-w-none"
+                      className="mt-4 -mb-4 md:-mb-0 lg:mt-0 lg:absolute lg:h-full lg:w-auto lg:max-w-none drop drop-shadow-md"
                     />
                   </div>
                 </div>

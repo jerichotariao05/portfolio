@@ -1,7 +1,7 @@
 import sisImage from "@/assets/images/CRB_login.png";
 import petAdoptionImage from "@/assets/images/pet_adoption.avif";
-import mathAppImage from "@/assets/images/math_kids.png";
-import novelaImage from "@/assets/images/photonovela.png";
+import mathAppImage from "@/assets/images/math_app.png";
+import novelaImage from "@/assets/images/photo_novela.png";
 
 export const links = [
   {
