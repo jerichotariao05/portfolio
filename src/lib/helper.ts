@@ -75,7 +75,7 @@ export const getErrorMessage = (error: unknown): string => {
   } else if (typeof error === "string") {
     message = error;
   } else {
-    message = "Something went wrong";
+    message = "Something went wrong. Please try again later.";
   }
 
   return message;

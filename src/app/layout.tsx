@@ -3,6 +3,7 @@ import { Raleway, Montserrat } from "next/font/google";
 import "./globals.css";
 import { twMerge } from "tailwind-merge";
 import ActiveSectionContextProvider from "@/context/ActiveSectionContext";
+import ScrollToTopButton from "@/components/ScrollToTopBtn";
 
 const raleway = Raleway({ subsets: ["latin"], variable: "--font-sans" });
 const montserrat = Montserrat({
@@ -28,7 +29,7 @@ export default function RootLayout({
         className={twMerge(
           raleway.variable,
           montserrat.variable,
-          "bg-blue-50 text-gray-950 antialiased font-sans"
+          "bg-blue-50 font-sans text-gray-950 antialiased"
         )}
       >
         <ActiveSectionContextProvider>{children}</ActiveSectionContextProvider>

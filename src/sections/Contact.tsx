@@ -58,7 +58,7 @@ const ContactSection = () => {
       if (error) {
         toast.error(error);
       } else {
-        toast.success("Email sent successfully!");
+        toast.success("Email sent successfully! Thank you for reaching out.");
         setFormData({
           senderName: "",
           senderEmail: "",

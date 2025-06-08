@@ -21,7 +21,7 @@ const AboutSection = () => {
         <SectionHeader
           eyebrow="About Me"
           title="Sync with my journey"
-          description="I am an aspiring web and mobile developer with a strong passion for combining creativity and functionality to build intuitive and engaging digital solutions. I have a solid foundation and experience in front-end, back-end, and mobile technologies."
+          description="I am a recent information technology graduate and an aspiring web and mobile developer passionate about combining creativity and functionality to build intuitive and engaging digital solutions. My current tech stack is React, Next.js, PHP, and MySQL. I am enthusiastic about continuously learning new technologies and expanding my skills."
         />
         <div className="mt-20 flex flex-col gap-8 md:flex-row md:gap-6">
           <div className="flex flex-col gap-8 md:gap-6 md:w-[45%] ">

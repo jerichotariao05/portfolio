@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { links } from "@/lib/data";
 import { useActiveSectionContext } from "@/context/ActiveSectionContext";
-import MobileMenu from "./MobileMenu";
+import MobileMenu from "../components/MobileMenu";
 
 const Header = () => {
   const { activeSection, setActiveSection, setTimeofLastClick } =

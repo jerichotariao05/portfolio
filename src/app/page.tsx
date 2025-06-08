@@ -1,3 +1,4 @@
+import ScrollToTopButton from "@/components/ScrollToTopBtn";
 import AboutSection from "@/sections/About";
 import ContactSection from "@/sections/Contact";
 import FooterSection from "@/sections/Footer";
@@ -17,6 +18,7 @@ export default function Home() {
         <ContactSection />
       </main>
       <FooterSection />
+      <ScrollToTopButton />
       <Toaster position="top-right" />
     </>
   );
