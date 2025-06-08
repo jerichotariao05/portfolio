@@ -1,4 +1,9 @@
-import { isValidEmail, isValidLength, isNonEmpty } from "./validation";
+import {
+  isValidEmail,
+  isValidLength,
+  isValidWordCount,
+  isNonEmpty,
+} from "./validation";
 
 export interface ContactFormData {
   senderName: string;
@@ -30,8 +35,8 @@ export function validateContactForm(data: ContactFormData): {
   if (!isNonEmpty(data.senderName)) {
     errors.senderName = "Name is required.";
     isValid = false;
-  } else if (!isValidLength(data.senderName, 50)) {
-    errors.senderName = "Name exceeds 50 characters.";
+  } else if (!isValidWordCount(data.senderName, 50)) {
+    errors.senderName = "Name exceeds 50 words.";
     isValid = false;
   }
 
@@ -49,16 +54,16 @@ export function validateContactForm(data: ContactFormData): {
   if (!isNonEmpty(data.subject)) {
     errors.subject = "Subject is required.";
     isValid = false;
-  } else if (!isValidLength(data.subject, 50)) {
-    errors.subject = "Subject exceeds 50 characters.";
+  } else if (!isValidWordCount(data.subject, 50)) {
+    errors.subject = "Subject exceeds 50 words.";
     isValid = false;
   }
 
   if (!isNonEmpty(data.message)) {
     errors.message = "Message is required.";
     isValid = false;
-  } else if (!isValidLength(data.message, 5000)) {
-    errors.message = "Message exceeds 5000 characters.";
+  } else if (!isValidWordCount(data.message, 300)) {
+    errors.message = "Message exceeds 300 words.";
     isValid = false;
   }
 
